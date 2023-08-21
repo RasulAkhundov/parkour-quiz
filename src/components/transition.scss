@@ -1,0 +1,23 @@
+.transition-wrapper-in {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: var(--black);
+   z-index: 9;
+   pointer-events: none;
+   transform-origin: bottom;
+}
+
+.transition-wrapper-out {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background: var(--black);
+   z-index: 9;
+   pointer-events: none;
+   transform-origin: top;
+}

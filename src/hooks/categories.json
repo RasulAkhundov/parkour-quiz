@@ -1,0 +1,14 @@
+[
+   {
+      "_id": 0,
+      "name": "Parkour",
+      "src": "parkour.png",
+      "animDelay": 0
+   },
+   {
+      "_id": 1,
+      "name": "Freerunning",
+      "src": "freerunning.jpeg",
+      "animDelay": 25
+   }
+]
