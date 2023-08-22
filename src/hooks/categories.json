@@ -2,13 +2,20 @@
    {
       "_id": 0,
       "name": "Parkour",
+      "pathname": "parkour",
       "src": "parkour.png",
       "animDelay": 0
    },
    {
       "_id": 1,
       "name": "Freerunning",
+      "pathname": "freerunning",
       "src": "freerunning.jpeg",
-      "animDelay": 25
+      "animDelay": 25,
+      "quizzes": [
+         {
+            "question": "What is this flip name?"
+         }
+      ]
    }
 ]

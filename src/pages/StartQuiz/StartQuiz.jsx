@@ -4,6 +4,8 @@ import './startQuiz.scss';
 ///IMPORT COMPONENTS
 import { motion as m } from "framer-motion";
 import $ from 'jquery';
+import CategoriesJSON from '../../hooks/categories.json';
+import { useLocation } from 'react-router-dom';
 
 const StartQuiz = () => {
 
@@ -11,8 +13,14 @@ const StartQuiz = () => {
   let [answeredCountdown, setAnsweredCountdown] = useState(15);
   let [counterColor, setCounterColor] = useState('green');
 
+  const location = useLocation();
+  const pathName = location.pathname.slice(6);
+  let findingCategory = CategoriesJSON.find(obj => obj.pathname === pathName);
+
   useEffect(() => {
     gameStartingCountdown();
+
+    console.log(findingCategory)
   }, []);
 
   const gameStartingCountdown = () => {
@@ -85,6 +93,11 @@ const StartQuiz = () => {
             <div className="header-quiz-countdown" style={{ border: `2px solid ${counterColor}` }}>
               <span>{answeredCountdown}</span>
             </div>
+          </div>
+
+          <div className="video-wrapper">
+            <iframe src="https://giphy.com/embed/3o7WTHezeJtx6jdcFq" style={{ pointerEvents: 'none' }} width="100%" height="270" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+
           </div>
 
           <div className="answers-wrapper">
